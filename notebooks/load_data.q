@@ -12,7 +12,7 @@ nlcupd:{[y;t]
 nlcdread:{nlcupd[x]nlcdtyp 0:hsym`$"data/snap_sampled_imp_nlcd_",string[2000+x],".csv"} 
 nlcd:raze nlcdread each 6 11 16
 
-gages:("SSSSFFSSIFFFFFFFFSSISSSSFF";enlist ",") 0:`:data/usgs_gage_subset.csv
+gauges:update prepsite site_no from ("SSSSFFSSIFFFFFFFFSSISSSSFF";enlist ",") 0:`:data/usgs_gage_subset.csv
 
 basin:("S",242#"F";enlist ",") 0:`:data/gages_with_basin_attr.csv
 

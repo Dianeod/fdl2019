@@ -13,7 +13,10 @@ pr_curve:{[Xtest;ytest;classifiers]
   clf:cl[x];
   ypredict:clf[`:predict][Xt]`;
   yscores:(clf[`:predict_proba][Xt]`)[;1];
-  0N!"Accuracy for ",string[x],": ",string (count where ypredict=yt)%count yt;
+  conf:.ml.confdict[yt;ypredict;1b];
+  meanclassavg:avg (conf[`tp]%(sum conf[`tp`fn]);conf[`tn]%(sum conf[`tn`fp]));
+  print "\n","Accuracy for ",string[x],": ",string (count where ypredict=yt)%count yt,"\n\n";
+  print "Meanclass accuracy for ",string[x],": ",string[meanclassavg],"\n\n";
   show .ml.classreport[ypredict;yt];
   prt:precision_recall_curve[yt;yscores]`;
   average_precision:average_precision_score[yt;yscores]`;
