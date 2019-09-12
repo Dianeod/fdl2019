@@ -8,8 +8,8 @@ plt:.p.import[`matplotlib]`:pyplot
 train_test_split:.p.import[`sklearn.model_selection]`:train_test_split
 
 pr_curve:{[Xtest;ytest;classifiers]
- 
- {[Xt;yt;cl;x]
+
+ plts:{[Xt;yt;cl;x]
   clf:cl[x];
   ypredict:clf[`:predict][Xt]`;
   yscores:(clf[`:predict_proba][Xt]`)[;1];
@@ -22,11 +22,13 @@ pr_curve:{[Xtest;ytest;classifiers]
   average_precision:average_precision_score[yt;yscores]`;
   plt[`:plot][prt[1];prt[0];`linewidth pykw 3;
     `label pykw string[x],"=",string[average_precision]];
- 
+
   plt[`:xlabel][`Recall;`fontsize pykw 14];
   plt[`:ylabel][`Precision;`fontsize pykw 14];
   plt[`:ylim][0.0; 1.05];
   plt[`:xlim][0.0; 1.0];
   plt[`:legend][`loc pykw "upper right";`fontsize pykw 11];
-  plt[`:tight_layout][]}[Xtest;ytest;classifiers]each key classifiers;
- plt[`:show][];}
+  plt[`:tight_layout][];
+  (enlist `pred)!enlist ypredict}[Xtest;ytest;classifiers]each key classifiers;
+ `plt`model!(plt[`:show][];plts`pred)}
+

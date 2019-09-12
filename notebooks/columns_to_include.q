@@ -1,4 +1,4 @@
-ungaged_noforcast_basin:
+ungauged_noforecast_basin:
     `month`cos_t`sin_t`elv`imp`CatAreaSqKm`WsAreaSqKm`CatAreaSqKmRp100`WsAreaSqKmRp100,
     `ElevCat`ElevWs`WtDepCat`WtDepWs`OmCat`OmWs`PermCat`PermWs`RckDepCat`RckDepWs`ClayCat`ClayWs,
     `SandCat`SandWs`RunoffCat`RunoffWs`WetIndexCat`WetIndexWs`BFICat`BFIWs`PctGlacTilCrsCat`PctGlacTilCrsWs`DamNrmStorWs,
@@ -14,7 +14,7 @@ ungaged_noforcast_basin:
     `PctImpWsRp100`PctMxFstCat`PctMxFstCatRp100`PctMxFstWs`PctMxFstWsRp100`PctOwCat`PctOwCatRp100`PctOwWs`PctOwWsRp100,
     `PctShrbCat`PctShrbCatRp100`PctShrbWs`PctShrbWsRp100`PctUrbHiCat`PctUrbHiCatRp100`PctUrbHiWs`PctUrbHiWsRp100`PctUrbLoCat`PctUrbLoCatRp100`PctUrbLoWs`PctUrbLoWsRp100`PctUrbMdCat`PctUrbMdCatRp100`PctUrbMdWs`PctUrbMdWsRp100`PctUrbOpCat`PctUrbOpCatRp100`PctUrbOpWs`PctUrbOpWsRp100`PctWdWetCat`PctWdWetCatRp100`PctWdWetWs`PctWdWetWsRp100
 
-gaged_basin:
+gauged_basin:
     `prev_height_1`prev_height_2`prev_height_3`prev_height_4`prev_height_5,
     `prev_height_6`prev_height_7`prev_height_8`prev_height_9`prev_height_10,
     `prev_upstr_height_1_1,`prev_upstr_height_1_2,`prev_upstr_height_1_3`prev_upstr_height_1_4,
@@ -22,7 +22,7 @@ gaged_basin:
     `prev_upstr_height_1_9`prev_upstr_height_1_10`lagged_target_12`lagged_target_1`lagged_target_all,
     `wind_prev_height_2`wind_prev_height_4`wind_prev_height_12`wind_prev_height_48`prev_avg_ht`prev_max_ht
 
-perfect_forcast:
+perfect_forecast:
     `window_ppt_1`window_ppt_2`window_ppt_3`window_ppt_4`window_ppt_5`window_ppt_6,
     `window_ppt_7`window_ppt_8`window_ppt_9`window_ppt_10`window_upstr_ppt_1_1`window_upstr_ppt_1_2,
     `window_upstr_ppt_1_3`window_upstr_ppt_1_4`window_upstr_ppt_1_5`window_upstr_ppt_1_6,
