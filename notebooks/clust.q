@@ -74,3 +74,6 @@ clust.i.findl:{y[3;z]first`int$y[4;z]<=x y[5;z]}
 /* rp  = rep points
 clust.i.calc:{[df;pts;p;rp]im:min mm:clust.i.dc[df;rp;p;pts];ir:p mm?im;(first ir;im)}
 
+clust.kd.searchfrom:{
+ {not x y}[x 2]clust.i.findl[y;x]/z}
+
