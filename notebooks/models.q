@@ -6,6 +6,7 @@ average_precision_score:.p.import[`sklearn.metrics]`:average_precision_score
 preprocessing:.p.import[`sklearn]`:preprocessing
 plt:.p.import[`matplotlib]`:pyplot
 train_test_split:.p.import[`sklearn.model_selection]`:train_test_split
+plt:.p.import`matplotlib.pyplot
 
 pr_curve:{[Xtest;ytest;classifiers]
 
