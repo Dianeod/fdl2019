@@ -5,3 +5,4 @@ scipy
 xgboost
 gmaps
 geopandas
+tensorflow
