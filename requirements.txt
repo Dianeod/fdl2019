@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+scipy
+xgboost
+gmaps
+geopandas
+tensorflow
