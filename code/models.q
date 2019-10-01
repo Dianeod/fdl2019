@@ -24,7 +24,8 @@ scoring:{[xtst;ytst;clf;clf_nm]
 plotting:{[ytst;scores;clf_nm]
   prt:precision_recall_curve[ytst;scores 0]`;
   average_precision:average_precision_score[ytst;scores 0]`;
-  plt[`:plot][prt[1];prt[0];`linewidth pykw 3;`label pykw string[clf_nm],"=",string[average_precision]];
+  arg_dict:`linewidth`label!(3;string[clf_nm],"=",string[average_precision]);
+  plt[`:plot][prt[1];prt[0];pykwargs arg_dict];
   plt[`:xlabel][`Recall;`fontsize pykw 14];
   plt[`:ylabel][`Precision;`fontsize pykw 14];
   plt[`:ylim][0.0; 1.05];

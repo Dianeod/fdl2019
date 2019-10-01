@@ -1,4 +1,3 @@
-.fld.loadfile`:code/python.q
 .fld.loadfile`:code/graphics.p
 .fld.loadfile`:code/clust.q
 .fld.loadfile`:code/models.q
