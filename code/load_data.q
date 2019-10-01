@@ -22,7 +22,7 @@ precipall:raze{flip `site_no`long`lat`elv`date`ppt!flip value each 10_("SFFFDF";
 
 nlcd:raze nlcdread each 6 11 16
 
-gauges:update prepsite site_no from ("SSSSFFSSIFFFFFFFFSSISSSSFF";enlist ",") 0:`$":../data/other/usgs_gage_subset.csv"
+gauges:update prepsite site_no from ("SFFSS";enlist ",") 0:`$":../data/other/usgs_gauge_subset.csv";
 
 basin:("S",242#"F";enlist ",") 0:`$":../data/other/gages_with_basin_attr.csv"
 
@@ -31,8 +31,12 @@ warnings:.ml.df2tab gp[`:read_file]["../data/other/national_shapefile_obs.shp"][
 
 // Load hdb's into memory
 
-\l ../data/time_to_peak_hdb
-peak:select from peak where date>=2009.07.01
+flash_cols:`site_no`lat`lon`start_time`end_time`peak_q`peak_time`delta_time
+peak:update date:`date$start_time from flash_cols xcol raze {("FFFZZFZF";enlist ",")0:x}each hsym `$"../data/other/flash/",/:string each -1_key `:../data/other/flash
 
-\l ../../data/gauges_hdb
+/\l ../data/time_to_peak_hdb
+/peak:select from peak where date>=2009.07.01
+
+/\l ../../data/gauges_hdb
+\l ../data/gauges_hdb
 max_ht_str:0!select max height by site_no,date from str

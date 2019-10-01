@@ -1,5 +1,3 @@
-\l p.q
-
 /This script takes the following as inputs
 /*sdate = start date of requested data
 /*edate = ens date of requested data
