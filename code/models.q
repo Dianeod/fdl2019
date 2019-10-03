@@ -1,10 +1,10 @@
 // Function needs to be split into sub functions one that does the prediction and a separate one to do the plotting
 // Can wrap up both functionalities in another function but it's difficult to parse out what's happening
-pr_curve:{[Xtest;ytest;classifiers]
+pr_curve:{[xtst;ytst;classifiers]
   plts:{[xtst;ytst;clf;clf_nm]
     yvals:scoring[xtst;ytst;clf;clf_nm];
     plotting[ytst;yvals;clf_nm];
-    yvals 1}[Xtest;ytest;classifiers]each key classifiers;
+    yvals 1}[xtst;ytst;classifiers]each key classifiers;
   `plt`model!(plt[`:show][];plts)
   }
 

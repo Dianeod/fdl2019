@@ -28,9 +28,9 @@ basin:("S",242#"F";enlist ",") 0:`$":../data/other/gages_with_basin_attr.csv"
 
 warnings:.ml.df2tab gp[`:read_file]["../data/other/national_shapefile_obs.shp"][`:dropna][`subset pykw (`Action;`Flood;`Moderate;`Major)][`:reset_index][`drop pykw 1b]
 
-
 flash_cols:`site_no`lat`lon`start_time`end_time`peak_q`peak_time`delta_time
-peak:update prepsite site_no,date:`date$start_time from flash_cols xcol raze {("FFFZZFZF";enlist ",")0:x}each hsym `$"../data/other/flash/",/:string each -1_key `:../data/other/flash
+flash_tab :flash_cols xcol raze {("FFFZZFZF";enlist ",")0:x}each hsym `$"../data/other/flash/",/:string each -1_key `:../data/other/flash
+peak:update prepsite site_no,date:`date$start_time from flash_tab
 peak:`start_time xasc select from peak where date>=2009.07.01
 
 //Load hdb's into memory
