@@ -6,3 +6,4 @@ xgboost
 gmaps
 geopandas
 tensorflow
+ipywidgets
