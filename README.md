@@ -26,15 +26,25 @@ In addition to the python functionality [JupyterQ](https://code.kx.com/v2/ml/jup
 ## Visualization
 In order to plot the google maps graphics, gmaps must be enabled
 ```bash
+jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
 jupyter nbextension enable --py --sys-prefix gmaps
 ```
 
 ## Downloading the data
 Due to the vast amount of data used within the notebooks, some of the datasets were excluded from the data directory of this repo. In order to download the data, run the following q scripts found within code/download. These scripts have been written with Linux based systems in mind as primary development was completed on such a system.
 
-```q
-q flashdown.q
-q streamdown.q -dir ../../data -sdate 2009.07.01 -edate 2019.06.30
-q usgs_gauge.q -dir ../../data -sdate 2009.07.01 -edate 2019.06.30
-q warning.q
+
+```bash
+q flasdown.q 							     /flash dataset
+q usgs_gage.q -dir ../../data -sdate 2009.07.01 -edate 2019.06.30    /usgs gage information
+q streamdown.q -dir ../../data -sdate 2009.07.01 -edate 2019.06.30   /usgs surfacewater data
+q warning.q 							     /NOAA warning thresholds
 ```
+
+The prism dataset collected from http://www.prism.oregonstate.edu/explorer/bulk.php can be cloned from the following github
+```
+git clone https://github.com/Dianeod/fdl2019
+```
+###Warning
+``The prism dataset takes up ~107M of memory
