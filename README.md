@@ -46,5 +46,8 @@ The prism dataset collected from http://www.prism.oregonstate.edu/explorer/bulk.
 ```
 git clone https://github.com/Dianeod/fdl2019
 ```
-### Warning
-``The prism dataset takes up ~107M of memory
+
+**Warning**
+``` 
+The prism dataset takes up ~120M of memory
+```
