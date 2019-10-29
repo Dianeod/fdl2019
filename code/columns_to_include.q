@@ -13,7 +13,7 @@ gauged_cols:
     `prev_upstr_height_1_1,`prev_upstr_height_1_2,`prev_upstr_height_1_3`prev_upstr_height_1_4,
     `prev_upstr_height_1_5`prev_upstr_height_1_6`prev_upstr_height_1_7`prev_upstr_height_1_8,
     `prev_upstr_height_1_9`lagged_target_1`lagged_target_all`lagged_target_12,
-    `wind_prev_height_2`wind_prev_height_4`wind_prev_height_12`wind_prev_height_48
+    `window_prev_height_2`window_prev_height_4`window_prev_height_12`window_prev_height_48
 
 perfect_forecast_cols:
     `window_ppt_1`window_ppt_2`window_ppt_3`window_ppt_4`window_ppt_5`window_ppt_6,
